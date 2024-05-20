@@ -7,7 +7,7 @@ import BlockProduct from "../../components/block/product";
 const Product = () => {
     return (
         <div className="main-page-wrapper">
-            <Seo title="Lucy Modas"/>
+            <Seo title="Isidora Modas"/>
             <Sidebar/>
             <Header/>
             <div className="vcamp-text-block-one md-pt-110">

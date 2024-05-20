@@ -8,7 +8,7 @@ import ProductList from "../../components/block/products";
 const Products = ( ) => {
     return (
         <div className="main-page-wrapper">
-            <Seo title="Lucy Catalog - Products"/>
+            <Seo title="Isidora Catalog - Products"/>
             <Sidebar/>
             <Header/>
             <div className="vcamp-text-block-one pt-180 md-pt-120">

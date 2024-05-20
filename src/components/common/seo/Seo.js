@@ -7,7 +7,7 @@ const Seo = ({ title }) => {
       <title>{title} || Catalogos</title>
       <meta
         name="description"
-        content="Web site for Lucy Modas"
+        content="Web site for Isidora Modas"
       />
       <link rel="canonical" href="https://themeforest.net/user/ib-themes" />
       <meta property="og:title" content="A very important title" />

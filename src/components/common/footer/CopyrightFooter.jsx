@@ -23,7 +23,7 @@ const CopyrightFooter = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Lucy Modas
+            Isidora Modas
           </a>{" "}
         </p>
       </div>

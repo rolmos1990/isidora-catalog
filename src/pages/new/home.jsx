@@ -16,7 +16,7 @@ const Home = (props) => {
 
     return (
         <div className="main-page-wrapper">
-            <Seo title="Lucy Modas"/>
+            <Seo title="Isidora Modas"/>
             {/* End Seo Related data */}
 
             {/* <!--
