@@ -6,7 +6,7 @@ export const priceFormat = (amount = 0, currency = "", decimalWithCommas = true)
         return "0.00";
     }
 
-    let amountRender = (parseFloat(amount).toFixed(2));
+    let amountRender = (parseFloat(amount).toFixed(0));
     if (decimalWithCommas) {
         amountRender = numberWithCommas(amountRender);
         if(currency && currency != ""){
