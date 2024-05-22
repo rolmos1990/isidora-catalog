@@ -16,7 +16,7 @@ function NotFound() {
           <p className="text-lg">
             Isidora Modas <br />, haz ingresado en una pagina incorrecta.
           </p>
-          <a href="http://lucymodas.com" className="theme-btn-four">
+          <a href="http://isidoramodas.com" className="theme-btn-four">
             Ir a la web
           </a>
         </div>

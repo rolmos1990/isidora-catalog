@@ -31,7 +31,7 @@ export const getTemplateUrlService = () => {
 }
 
 export const getTestImageBaseService = () => {
-    return 'https://moie2.lucymodas.com';
+    return 'https://moie-core.isidoramodas.com';
     return process.env.REACT_APP_BASE_SERVICE_URL;
 }
 
