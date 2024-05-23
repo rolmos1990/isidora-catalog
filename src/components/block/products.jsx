@@ -168,7 +168,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
             <div className="currency">
                 <div className="currency-icon">
                     <h6 style={{'margin': '0px 10px'}}>PESOS</h6>
-                    <img style={{'height': mediaQuerySmall ? '16px' : '32px'}} src={Bandera}/>
+                    <img style={{'height': mediaQuerySmall ? '14px' : '32px'}} src={Bandera}/>
                 </div>
                 <h5 style={{'font-size': mediaQuerySmall ? '14px' : '20px', 'float': 'right'}}>{_item.price}</h5>
             </div>
