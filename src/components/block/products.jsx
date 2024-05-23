@@ -9,6 +9,8 @@ import ProductDataService from "../../redux/services/product.service";
 import {getImageByQuality, productPriceWithDiscount} from "../../utils/helpers";
 import {Link} from "react-router-dom";
 import {ImageItem} from "../image/ImageItem";
+import Bandera from "../../assets/images/assets/bandera.png";
+
 
 const ProductList = ({clear_product, getCategory, clear_category, items, retrieveProduct, meta, set_offset, offset, scroll_saved, scrollSaved, reset}) => {
 
@@ -166,9 +168,9 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
             <div className="currency">
                 <div className="currency-icon">
                     <h6 style={{'margin': '0px 10px'}}>PESOS</h6>
-                    <img style={{'height': mediaQuerySmall ? '16px' : '32px'}} src="http://lucymodas.com/img/bandera.png"/>
+                    <img style={{'height': mediaQuerySmall ? '16px' : '32px'}} src={Bandera}/>
                 </div>
-                <h5 style={{'font-size': mediaQuerySmall ? '14px' : '20px'}}>{_item.price}</h5>
+                <h5 style={{'font-size': mediaQuerySmall ? '14px' : '20px', 'position': 'relative', 'left': '0.7em'}}>{_item.price}</h5>
             </div>
         </div>
         </div></Link>;

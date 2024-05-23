@@ -5,12 +5,12 @@ const CopyrightSocial = () => {
     {
       id: 1,
       iconName: "fa-facebook-f",
-      socialLink: "https://www.facebook.com/lucymodascolombia",
+      socialLink: "https://web.facebook.com/profile.php?id=61558114324355",
     },
     {
       id: 3,
       iconName: "fa-instagram",
-      socialLink: "https://www.instagram.com/lucymodascolombia",
+      socialLink: "https://www.instagram.com/isidoramodascl?igsh=MWo2cmw2NGc2c3hpMA==",
     },
   ];
 
