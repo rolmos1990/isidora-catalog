@@ -170,7 +170,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
                     <h6 style={{'margin': '0px 10px'}}>PESOS</h6>
                     <img style={{'height': mediaQuerySmall ? '16px' : '32px'}} src={Bandera}/>
                 </div>
-                <h5 style={{'font-size': mediaQuerySmall ? '14px' : '20px', 'position': 'relative', 'left': '0.7em'}}>{_item.price}</h5>
+                <h5 style={{'font-size': mediaQuerySmall ? '14px' : '20px', 'float': 'right'}}>{_item.price}</h5>
             </div>
         </div>
         </div></Link>;
