@@ -24,15 +24,15 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
         setList([]);
         setHasMore(true);
         setLoading(false);
-        getMore(1);
-    }, [reset, category]);
+        getMore(2);
+    }, [reset]);
 
     useEffect(() => {
         getCategory({category});
 
         setTimeout(function() {
             window.scrollTo(0, scrollSaved);
-        }, 1400);
+        }, 2400);
 
     }, [category, getCategory, scrollSaved]);
 
