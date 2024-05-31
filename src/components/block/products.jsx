@@ -5,7 +5,6 @@ import {connect} from "react-redux";
 import InfiniteScroll from 'react-infinite-scroller';
 import {useParams} from "react-router";
 import {clear_category, getCategory} from "../../redux/features/category-slice";
-import ProductDataService from "../../redux/services/product.service";
 import {getImageByQuality, productPriceWithDiscount} from "../../utils/helpers";
 import {Link} from "react-router-dom";
 import {ImageItem} from "../image/ImageItem";
@@ -25,7 +24,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
         setHasMore(true);
         setLoading(false);
         getMore(1);
-    }, [reset]);
+    }, [reset, category]);
 
     useEffect(() => {
         getCategory({category});
@@ -34,7 +33,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
             window.scrollTo(0, scrollSaved);
         }, 2400);
 
-    }, []);
+    }, [category, getCategory, scrollSaved]);
 
     const getConverterArrayPortfolio = (portfolioContent) => {
         //group by 2 columns
