@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import InfiniteScroll from 'react-infinite-scroller';
 import {useParams} from "react-router";
 import {clear_category, getCategory} from "../../redux/features/category-slice";
+import ProductDataService from "../../redux/services/product.service";
 import {getImageByQuality, productPriceWithDiscount} from "../../utils/helpers";
 import {Link} from "react-router-dom";
 import {ImageItem} from "../image/ImageItem";
@@ -18,7 +19,6 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
     let [loading, setLoading] = useState(false);
     const scroll = useRef(null);
     let [hasMore, setHasMore] = useState(true);
-    let [offsetUsed, setOffsetUsed] = useState(-1);
 
     useEffect(() => {
         setList([]);
@@ -34,7 +34,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
             window.scrollTo(0, scrollSaved);
         }, 2400);
 
-    }, [category, getCategory, scrollSaved]);
+    }, []);
 
     const getConverterArrayPortfolio = (portfolioContent) => {
         //group by 2 columns
@@ -117,13 +117,11 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
             return;
         }
 
-        const _offset = (page - 1) * 10;
-
-        if(!loading && _offset > offsetUsed) {
+        if(!loading) {
             setLoading(true);
             //get more items
             try {
-                setOffsetUsed(_offset);
+                const _offset = (page - 1) * 10;
                 if (_offset > offset) {
                     set_offset({offset: _offset});
                     retrieveProduct({category, limit: 10, page: _offset});
