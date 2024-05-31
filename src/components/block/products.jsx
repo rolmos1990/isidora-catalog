@@ -32,7 +32,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
 
         setTimeout(function() {
             window.scrollTo(0, scrollSaved);
-        }, 2400);
+        }, 1400);
 
     }, [category, getCategory, scrollSaved]);
 
@@ -182,7 +182,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
                 pageStart={parseInt(offset / 10)}
                 loadMore={getMore}
                 threshold={0}
-                initialLoad={false}
+                initialLoad={true}
                 hasMore={!loading && hasMore}
                 loader={<h3 className="loader text-muted text-center" key={0}> ... </h3>}
             >
