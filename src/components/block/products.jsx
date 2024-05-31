@@ -18,6 +18,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
     let [loading, setLoading] = useState(false);
     const scroll = useRef(null);
     let [hasMore, setHasMore] = useState(true);
+    let [offsetUsed, setOffsetUsed] = useState(-1);
 
     useEffect(() => {
         setList([]);
@@ -116,11 +117,13 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
             return;
         }
 
-        if(!loading) {
+        const _offset = (page - 1) * 10;
+
+        if(!loading && _offset > offsetUsed) {
             setLoading(true);
             //get more items
             try {
-                const _offset = (page - 1) * 10;
+                setOffsetUsed(_offset);
                 if (_offset > offset) {
                     set_offset({offset: _offset});
                     retrieveProduct({category, limit: 10, page: _offset});
