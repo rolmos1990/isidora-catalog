@@ -24,7 +24,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
         setList([]);
         setHasMore(true);
         setLoading(false);
-        getMore(2);
+        getMore(1);
     }, [reset]);
 
     useEffect(() => {
