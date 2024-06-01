@@ -19,12 +19,13 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
     let [loading, setLoading] = useState(false);
     const scroll = useRef(null);
     let [hasMore, setHasMore] = useState(true);
+    const [page, setPage] = useState(0);
 
     useEffect(() => {
         setList([]);
         setHasMore(true);
         setLoading(false);
-        getMore(1);
+        //getMore(1);
     }, [reset]);
 
     useEffect(() => {
@@ -177,7 +178,7 @@ const ProductList = ({clear_product, getCategory, clear_category, items, retriev
         return (
             <InfiniteScroll
                 ref={scroll}
-                pageStart={parseInt(offset / 10)}
+                pageStart={page}
                 loadMore={getMore}
                 threshold={0}
                 initialLoad={true}
